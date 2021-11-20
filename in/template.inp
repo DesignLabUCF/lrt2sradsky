@@ -1,0 +1,28 @@
+#------------------------------------------
+# DEFAULT PARAMETERS
+#------------------------------------------
+
+# extraterrestrial spectrum
+#source solar ../data/solar_flux/atlas_plus_modtran
+source solar
+
+# solver parameters
+rte_solver disort         # Radiative transfer equation solver
+#rte_solver twostr         # Radiative transfer equation solver
+number_of_streams  32     # Number of streams
+pseudospherical
+
+# post and output parameters
+#output_process per_nm
+#output_process sum        # Calculate integrated solar irradiance?
+output_user lambda edir edn eglo
+
+# default spectral range
+spline 350 1780 1         # Interpolate from first to last in step
+wavelength 350 1780       # Wavelength range [nm]
+
+# default date, time, site, sun
+time 2000 01 01 12 00 00
+
+verbose
+

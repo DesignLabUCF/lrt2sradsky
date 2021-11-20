@@ -1,0 +1,15 @@
+# site location
+latitude N 42.4434
+longitude W 76.4816
+altitude 0.1605
+albedo 0.2
+
+# atmospheric profile
+atmosphere_file ../data/atmmod/afglms.dat
+
+# aerosol and molecule parameters
+#mol_abs_param KATO        # Correlated-k by Kato et al. [1999]
+#mol_abs_param reptran course
+#mol_modify O3 300. DU     # Set ozone column
+#slit_function_file ../examples/TRI_SLIT.DAT
+
