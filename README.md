@@ -39,14 +39,14 @@ to produce:
 # libRadtran 
 ### Install
 libRadtran is easy to install by following their instructions on their website: http://www.libradtran.org/doku.php?id=download  
-If you get any errors during install, it is probably because you are missing some of the required libraries like: make, gcc/gpp, gsl, flex, netcdf, etc.  
+Any errors during install probably because missing required libraries: make, gcc/gpp, gsl, flex, netcdf, etc.  
 Make sure to download and unpack the following absorption and scattering databases as well (necessary for accurate results):  
 - Optical properties of water clouds, ice clouds and OPAC aerosols in netcdf format  
 - Optical properties for ice cloud parameterization based on single scattering data by P. Yang et al., 2013  
 - Data for the REPTRAN absorption parameterization  
 
 Once installed, there are many input (.inp) file examples in the `examples` directory.  
-The libRadtran manual can be found here: http://www.libradtran.org/doc/libRadtran.pdf  
+The libRadtran manual can be found here: http://www.libradtran.org/doc/libRadtran.pdf (**Chapter 3.1**)    
 Specifics about default solver (`distort`): http://www.libradtran.org/lib/exe/fetch.php?media=disortreport1.1.pdf   
 
 ### Usage
@@ -54,5 +54,5 @@ Specifics about default solver (`distort`): http://www.libradtran.org/lib/exe/fe
 `uvspec` **must** be executed in such a way so that it knows where the libRadtran `data` directory is, which includes the atmospheric databases needed for it to run. Some of this data can be specified by path in the input files themselves, but some of it is accessed from this default `data` directory within the libRadtran install folder by default. If you do not want to change your current working directory, you can execute `uvspec` like this so that it can still load its data:  
 `cd ~/libRadtran-2.0.2/bin/ && exec uvspec < in/ithaca.072620131315EST.inp > in/ithaca.072620131315EST.out`  
 
-By default, standard out and err will be saved to a file called `log.txt` or `verbose.txt`. You can redirect this output to whichever file you want like so:  
+By default, standard out and err will be saved to a file called `log.txt` or `verbose.txt`, but can be reedirected like this:  
 `(cd ~/libRadtran-2.0.2/bin/ && exec uvspec < in/ithaca.072620131315EST.inp > in/ithaca.072620131315EST.out) >& out/ithaca.072620131315EST.txt`
