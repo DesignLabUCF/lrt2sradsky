@@ -51,7 +51,7 @@ Specifics about default solver (`distort`): http://www.libradtran.org/lib/exe/fe
 
 ### Usage
 **`uvspec`** is the tool that produces the spectral radiances.  
-`uvspec` **must** be executed in such a way so that it knows where the libRadtran `data` directory is, which includes the atmospheric databases needed for it to run. It is not clear in the help of the command how to change or specify the data directory so that uvspec could be executed from a different working direction. If you do not want to change your current working directory, you can execute `uvspec` like this so that it can still load its data:  
+`uvspec` **must** be executed in such a way so that it knows where the libRadtran `data` directory is, which includes the atmospheric databases needed for it to run. Some of this data can be specified by path in the input files themselves, but some of it is accessed from this default `data` directory within the libRadtran install folder by default. If you do not want to change your current working directory, you can execute `uvspec` like this so that it can still load its data:  
 `cd ~/libRadtran-2.0.2/bin/ && exec uvspec < in/ithaca.072620131315EST.inp > in/ithaca.072620131315EST.out`  
 
 By default, standard out and err will be saved to a file called `log.txt` or `verbose.txt`. You can redirect this output to whichever file you want like so:  
