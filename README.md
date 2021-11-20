@@ -56,3 +56,5 @@ Specifics about default solver (`distort`): http://www.libradtran.org/lib/exe/fe
 
 By default, standard out and err will be saved to a file called `log.txt` or `verbose.txt`, but can be reedirected like this:  
 `(cd ~/libRadtran-2.0.2/bin/ && exec uvspec < in/ithaca.072620131315EST.inp > in/ithaca.072620131315EST.out) >& out/ithaca.072620131315EST.txt`
+
+Depending on the database files used, the default units for radiance may be in milliwatts (`mW/m^2 nm sr`) (libRadtran manual chpt 6.1 output_process per_nm "W or mW is determined by the extraterrestrial spectrum"). Be aware of this and divide if necessary...
